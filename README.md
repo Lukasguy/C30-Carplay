@@ -6,7 +6,17 @@ https://github.com/laurynas/volvo_crankshaft
 
 ## Modifying the RTI screen
 
-The RTI screen has been modified in the same way as in the volvo_crankshaft project above. 
+The RTI screen has been modified in the same way as in the volvo_crankshaft project above. I decided not to glue in the LCD to the plastic cover, but to design and 3d print mounts which are glued to the edges of the back of the LCD. These can be used to screw the display onto the frame the same way as the original, and another plus is that the display can be easily alligned perfectly. 
+
+The displays controller board has been mounted on the back of the display with the back taped off the prevent shorts on the metal of the LCD. 
+
+I've soldered 4 wires which run to the original data connector & power connectors of the RTI module:
+* Power which is connected to the ACC ignition switched 12V connector
+* Ground which is connected to the ground of the power connector
+* power button pin which is connected to pin 1 of the origin data connector
+* source button pin which is connected to pin 5 (need to check this) of the original connector
+
+Pin 10 of the data connector has been connected to the ACC 12V switched signal of the power connector. This will tell the custom MMM box the status of the ignition. 
 
 ## Replacing the MMM with a custom box
 
